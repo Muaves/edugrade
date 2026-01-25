@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EduGrade</title>
   <meta name="description" content="EduGrade coming soon... ">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --background: 0 0% 100%;
@@ -121,7 +124,9 @@
       --gradient-accent: linear-gradient(135deg, hsl(100 50% 45%), hsl(120 55% 40%));
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -138,13 +143,32 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
-    .font-display { font-family: var(--font-display); }
-    .font-sans { font-family: var(--font-sans); }
-    
-    .gradient-primary { background: var(--gradient-primary); }
-    .gradient-secondary { background: var(--gradient-secondary); }
-    .gradient-accent { background: var(--gradient-accent); }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .font-display {
+      font-family: var(--font-display);
+    }
+
+    .font-sans {
+      font-family: var(--font-sans);
+    }
+
+    .gradient-primary {
+      background: var(--gradient-primary);
+    }
+
+    .gradient-secondary {
+      background: var(--gradient-secondary);
+    }
+
+    .gradient-accent {
+      background: var(--gradient-accent);
+    }
+
     .gradient-text {
       background: var(--gradient-primary);
       -webkit-background-clip: text;
@@ -152,52 +176,145 @@
       background-clip: text;
     }
 
-    .text-foreground { color: hsl(var(--foreground)); }
-    .text-muted-foreground { color: hsl(var(--muted-foreground)); }
-    .text-primary { color: hsl(var(--primary)); }
-    .text-primary-foreground { color: hsl(var(--primary-foreground)); }
-    .text-accent { color: hsl(var(--accent)); }
-    .text-secondary { color: hsl(var(--secondary)); }
+    .text-foreground {
+      color: hsl(var(--foreground));
+    }
 
-    .bg-background { background: hsl(var(--background)); }
-    .bg-card { background: hsl(var(--card)); }
-    .bg-muted { background: hsl(var(--muted)); }
-    .bg-primary { background: hsl(var(--primary)); }
+    .text-muted-foreground {
+      color: hsl(var(--muted-foreground));
+    }
 
-    .border-border { border-color: hsl(var(--border)); }
-    .border-primary { border-color: hsl(var(--primary)); }
+    .text-primary {
+      color: hsl(var(--primary));
+    }
+
+    .text-primary-foreground {
+      color: hsl(var(--primary-foreground));
+    }
+
+    .text-accent {
+      color: hsl(var(--accent));
+    }
+
+    .text-secondary {
+      color: hsl(var(--secondary));
+    }
+
+    .bg-background {
+      background: hsl(var(--background));
+    }
+
+    .bg-card {
+      background: hsl(var(--card));
+    }
+
+    .bg-muted {
+      background: hsl(var(--muted));
+    }
+
+    .bg-primary {
+      background: hsl(var(--primary));
+    }
+
+    .border-border {
+      border-color: hsl(var(--border));
+    }
+
+    .border-primary {
+      border-color: hsl(var(--primary));
+    }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
     }
+
     @keyframes slide-up {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @keyframes fade-in {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
+
     @keyframes scale-in {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
+
     @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
     }
 
-    .animate-float { animation: float 6s ease-in-out infinite; }
-    .animate-slide-up { animation: slide-up 0.6s ease-out forwards; }
-    .animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
-    .animate-scale-in { animation: scale-in 0.4s ease-out forwards; }
-    .animate-pulse { animation: pulse 2s ease-in-out infinite; }
-    .animation-delay-100 { animation-delay: 100ms; }
-    .animation-delay-200 { animation-delay: 200ms; }
-    .animation-delay-300 { animation-delay: 300ms; }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
 
-    
+    .animate-slide-up {
+      animation: slide-up 0.6s ease-out forwards;
+    }
+
+    .animate-fade-in {
+      animation: fade-in 0.5s ease-out forwards;
+    }
+
+    .animate-scale-in {
+      animation: scale-in 0.4s ease-out forwards;
+    }
+
+    .animate-pulse {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .animation-delay-100 {
+      animation-delay: 100ms;
+    }
+
+    .animation-delay-200 {
+      animation-delay: 200ms;
+    }
+
+    .animation-delay-300 {
+      animation-delay: 300ms;
+    }
+
+
     .nav {
       position: fixed;
       top: 0;
@@ -209,6 +326,7 @@
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid hsl(var(--border));
     }
+
     .nav-content {
       display: flex;
       align-items: center;
@@ -217,12 +335,14 @@
       max-width: 1280px;
       margin: 0 auto;
     }
+
     .logo {
       display: flex;
       align-items: center;
       gap: 0.75rem;
       text-decoration: none;
     }
+
     .logo-icon {
       width: 2.5rem;
       height: 2.5rem;
@@ -231,19 +351,25 @@
       align-items: center;
       justify-content: center;
     }
+
     .logo-text {
       font-family: var(--font-display);
       font-size: 1.25rem;
       font-weight: 700;
     }
+
     .nav-links {
       display: none;
       align-items: center;
       gap: 2rem;
     }
+
     @media (min-width: 768px) {
-      .nav-links { display: flex; }
+      .nav-links {
+        display: flex;
+      }
     }
+
     .nav-link {
       color: hsl(var(--muted-foreground));
       text-decoration: none;
@@ -251,7 +377,11 @@
       position: relative;
       transition: color 0.2s;
     }
-    .nav-link:hover { color: hsl(var(--foreground)); }
+
+    .nav-link:hover {
+      color: hsl(var(--foreground));
+    }
+
     .nav-link::after {
       content: '';
       position: absolute;
@@ -262,7 +392,11 @@
       background: var(--gradient-primary);
       transition: width 0.3s;
     }
-    .nav-link:hover::after { width: 100%; }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
     .nav-actions {
       display: flex;
       align-items: center;
@@ -284,35 +418,60 @@
       text-decoration: none;
       font-family: var(--font-sans);
     }
+
     .btn-primary {
       background: var(--gradient-primary);
       color: hsl(var(--primary-foreground));
     }
-    .btn-primary:hover { transform: scale(1.05); }
-    .btn-primary:active { transform: scale(0.95); }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-primary:active {
+      transform: scale(0.95);
+    }
+
     .btn-secondary {
       background: hsl(var(--muted));
       color: hsl(var(--foreground));
       border: 1px solid hsl(var(--border));
     }
-    .btn-secondary:hover { background: hsl(var(--muted) / 0.8); }
+
+    .btn-secondary:hover {
+      background: hsl(var(--muted) / 0.8);
+    }
+
     .btn-ghost {
       background: transparent;
       color: hsl(var(--muted-foreground));
     }
-    .btn-ghost:hover { color: hsl(var(--foreground)); }
-    .btn-lg { padding: 1rem 2rem; font-size: 1rem; font-weight: 600; }
+
+    .btn-ghost:hover {
+      color: hsl(var(--foreground));
+    }
+
+    .btn-lg {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
     .btn-icon {
       padding: 0.625rem;
       border-radius: 0.75rem;
       background: hsl(var(--muted));
     }
+
     .btn-icon:hover {
       background: hsl(var(--muted) / 0.8);
       transform: scale(1.05);
     }
 
-    .theme-switcher { position: relative; }
+    .theme-switcher {
+      position: relative;
+    }
+
     .theme-dropdown {
       position: absolute;
       top: calc(100% + 0.5rem);
@@ -326,7 +485,12 @@
       box-shadow: 0 10px 40px -10px hsl(var(--foreground) / 0.15);
       z-index: 100;
     }
-    .theme-dropdown.open { display: block; animation: scale-in 0.2s ease-out; }
+
+    .theme-dropdown.open {
+      display: block;
+      animation: scale-in 0.2s ease-out;
+    }
+
     .theme-option {
       display: flex;
       align-items: center;
@@ -338,27 +502,45 @@
       color: hsl(var(--foreground));
       transition: background 0.15s;
     }
-    .theme-option:hover { background: hsl(var(--muted)); }
-    .theme-option-left { display: flex; align-items: center; gap: 0.75rem; }
-    .theme-colors { display: flex; margin-left: -0.25rem; }
+
+    .theme-option:hover {
+      background: hsl(var(--muted));
+    }
+
+    .theme-option-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .theme-colors {
+      display: flex;
+      margin-left: -0.25rem;
+    }
+
     .theme-color {
       width: 1rem;
       height: 1rem;
       border-radius: 50%;
       border: 2px solid hsl(var(--background));
     }
-    .theme-check { color: hsl(var(--primary)); }
+
+    .theme-check {
+      color: hsl(var(--primary));
+    }
 
     .hero {
       position: relative;
       padding: 8rem 1.5rem 5rem;
     }
+
     .hero-bg {
       position: fixed;
       inset: 0;
       pointer-events: none;
       overflow: hidden;
     }
+
     .hero-gradient {
       position: absolute;
       top: 0;
@@ -367,11 +549,13 @@
       height: 600px;
       background: linear-gradient(to bottom, hsl(var(--primary) / 0.05), transparent);
     }
+
     .hero-blob {
       position: absolute;
       border-radius: 50%;
       filter: blur(60px);
     }
+
     .hero-blob-1 {
       top: 20%;
       left: 10%;
@@ -379,6 +563,7 @@
       height: 16rem;
       background: hsl(var(--primary) / 0.1);
     }
+
     .hero-blob-2 {
       top: 40%;
       right: 15%;
@@ -386,6 +571,7 @@
       height: 12rem;
       background: hsl(var(--secondary) / 0.1);
     }
+
     .hero-content {
       max-width: 48rem;
       margin: 0 auto;
@@ -393,6 +579,7 @@
       position: relative;
       z-index: 1;
     }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -405,7 +592,11 @@
       color: hsl(var(--muted-foreground));
       margin-bottom: 2rem;
     }
-    .hero-badge svg { color: hsl(var(--primary)); }
+
+    .hero-badge svg {
+      color: hsl(var(--primary));
+    }
+
     .hero-title {
       font-family: var(--font-display);
       font-size: clamp(2.5rem, 8vw, 4.5rem);
@@ -413,12 +604,14 @@
       line-height: 1.1;
       margin-bottom: 1.5rem;
     }
+
     .hero-subtitle {
       font-size: 1.125rem;
       color: hsl(var(--muted-foreground));
       max-width: 42rem;
       margin: 0 auto 2.5rem;
     }
+
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
@@ -426,25 +619,42 @@
       justify-content: center;
       margin-bottom: 3rem;
     }
+
     .hero-social {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 2rem;
     }
+
     .avatar-stack {
       display: flex;
       margin-left: -0.75rem;
     }
+
     .avatar {
       width: 2.5rem;
       height: 2.5rem;
       border-radius: 50%;
       border: 2px solid hsl(var(--background));
     }
-    .rating { text-align: left; }
-    .stars { display: flex; align-items: center; gap: 0.125rem; }
-    .star { width: 1rem; height: 1rem; color: hsl(var(--primary)); fill: hsl(var(--primary)); }
+
+    .rating {
+      text-align: left;
+    }
+
+    .stars {
+      display: flex;
+      align-items: center;
+      gap: 0.125rem;
+    }
+
+    .star {
+      width: 1rem;
+      height: 1rem;
+      color: hsl(var(--primary));
+      fill: hsl(var(--primary));
+    }
 
     .card {
       background: hsl(var(--card));
@@ -453,11 +663,13 @@
       padding: 2rem;
       transition: all 0.3s;
     }
+
     .card:hover {
       border-color: hsl(var(--primary) / 0.3);
       box-shadow: 0 10px 40px -10px hsl(var(--foreground) / 0.1);
       transform: translateY(-4px);
     }
+
     .card-icon {
       width: 3.5rem;
       height: 3.5rem;
@@ -468,17 +680,23 @@
       margin-bottom: 1.5rem;
       transition: transform 0.3s;
     }
-    .card:hover .card-icon { transform: scale(1.1); }
+
+    .card:hover .card-icon {
+      transform: scale(1.1);
+    }
+
     .card-title {
       font-family: var(--font-display);
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 0.75rem;
     }
+
     .card-desc {
       color: hsl(var(--muted-foreground));
       font-size: 0.9375rem;
     }
+
     .card-arrow {
       position: absolute;
       bottom: 2rem;
@@ -488,6 +706,7 @@
       transform: translateX(0);
       transition: all 0.3s;
     }
+
     .card:hover .card-arrow {
       opacity: 1;
       transform: translateX(0.5rem);
@@ -497,11 +716,13 @@
       padding: 6rem 1.5rem;
       position: relative;
     }
+
     .section-header {
       text-align: center;
       max-width: 48rem;
       margin: 0 auto 4rem;
     }
+
     .section-badge {
       display: inline-flex;
       align-items: center;
@@ -514,16 +735,19 @@
       color: hsl(var(--muted-foreground));
       margin-bottom: 1.5rem;
     }
+
     .section-title {
       font-family: var(--font-display);
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 700;
       margin-bottom: 1rem;
     }
+
     .section-subtitle {
       font-size: 1.125rem;
       color: hsl(var(--muted-foreground));
     }
+
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -538,11 +762,13 @@
       position: relative;
       overflow: hidden;
     }
+
     .stats-bg {
       position: absolute;
       inset: 0;
       background: linear-gradient(to right, hsl(var(--primary) / 0.05), hsl(var(--secondary) / 0.05), hsl(var(--accent) / 0.05));
     }
+
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -550,18 +776,24 @@
       position: relative;
       z-index: 1;
     }
-    .stat { text-align: center; }
+
+    .stat {
+      text-align: center;
+    }
+
     .stat-icon {
       width: 2rem;
       height: 2rem;
       margin: 0 auto 1rem;
       color: hsl(var(--primary));
     }
+
     .stat-value {
       font-family: var(--font-display);
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 700;
     }
+
     .stat-label {
       color: hsl(var(--muted-foreground));
       font-size: 0.9375rem;
@@ -573,6 +805,7 @@
       justify-content: center;
       gap: 1rem;
     }
+
     .download-btn {
       display: flex;
       align-items: center;
@@ -585,20 +818,33 @@
       transition: all 0.3s;
       text-align: left;
     }
+
     .download-btn:hover {
       border-color: hsl(var(--primary) / 0.3);
       box-shadow: 0 10px 30px -10px hsl(var(--foreground) / 0.1);
       transform: scale(1.05);
     }
-    .download-btn svg { width: 2rem; height: 2rem; }
-    .download-btn-text { font-size: 0.75rem; color: hsl(var(--muted-foreground)); }
-    .download-btn-label { font-weight: 600; }
+
+    .download-btn svg {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .download-btn-text {
+      font-size: 0.75rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .download-btn-label {
+      font-weight: 600;
+    }
 
     .footer {
       border-top: 1px solid hsl(var(--border));
       padding: 5rem 1.5rem 2rem;
       background: hsl(var(--muted) / 0.3);
     }
+
     .footer-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -606,14 +852,24 @@
       padding-bottom: 4rem;
       border-bottom: 1px solid hsl(var(--border));
     }
-    .footer-brand { grid-column: span 2; }
-    @media (max-width: 768px) { .footer-brand { grid-column: span 1; } }
+
+    .footer-brand {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 768px) {
+      .footer-brand {
+        grid-column: span 1;
+      }
+    }
+
     .footer-brand-logo {
       display: flex;
       align-items: center;
       gap: 0.75rem;
       margin-bottom: 1.5rem;
     }
+
     .footer-brand-icon {
       width: 3rem;
       height: 3rem;
@@ -622,21 +878,25 @@
       align-items: center;
       justify-content: center;
     }
+
     .footer-brand-name {
       font-family: var(--font-display);
       font-size: 1.5rem;
       font-weight: 700;
     }
+
     .footer-brand-desc {
       color: hsl(var(--muted-foreground));
       max-width: 20rem;
       margin-bottom: 1.5rem;
       font-size: 0.9375rem;
     }
+
     .social-links {
       display: flex;
       gap: 0.75rem;
     }
+
     .social-link {
       width: 2.5rem;
       height: 2.5rem;
@@ -649,17 +909,25 @@
       color: hsl(var(--muted-foreground));
       transition: all 0.2s;
     }
+
     .social-link:hover {
       color: hsl(var(--foreground));
       border-color: hsl(var(--primary) / 0.3);
       transform: scale(1.1);
     }
+
     .footer-section h4 {
       font-family: var(--font-display);
       font-weight: 700;
       margin-bottom: 1rem;
     }
-    .footer-links { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
     .footer-link {
       color: hsl(var(--muted-foreground));
       text-decoration: none;
@@ -669,36 +937,47 @@
       align-items: center;
       gap: 0.5rem;
     }
-    .footer-link:hover { color: hsl(var(--foreground)); }
+
+    .footer-link:hover {
+      color: hsl(var(--foreground));
+    }
+
     .footer-link svg {
       width: 0.75rem;
       height: 0.75rem;
       opacity: 0;
       transition: opacity 0.2s;
     }
-    .footer-link:hover svg { opacity: 1; }
+
+    .footer-link:hover svg {
+      opacity: 1;
+    }
 
     .newsletter {
       padding: 3rem 0;
       border-bottom: 1px solid hsl(var(--border));
       text-align: center;
     }
+
     .newsletter-title {
       font-family: var(--font-display);
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
     }
+
     .newsletter-desc {
       color: hsl(var(--muted-foreground));
       margin-bottom: 1.5rem;
     }
+
     .newsletter-form {
       display: flex;
       gap: 0.75rem;
       max-width: 28rem;
       margin: 0 auto;
     }
+
     .newsletter-input {
       flex: 1;
       padding: 0.75rem 1.25rem;
@@ -711,11 +990,16 @@
       transition: border-color 0.2s;
       font-family: var(--font-sans);
     }
-    .newsletter-input::placeholder { color: hsl(var(--muted-foreground)); }
+
+    .newsletter-input::placeholder {
+      color: hsl(var(--muted-foreground));
+    }
+
     .newsletter-input:focus {
       border-color: hsl(var(--primary));
       box-shadow: 0 0 0 3px hsl(var(--primary) / 0.2);
     }
+
     .newsletter-btn {
       padding: 0.75rem 1.5rem;
       border-radius: 0.75rem;
@@ -727,7 +1011,10 @@
       transition: transform 0.2s;
       font-family: var(--font-sans);
     }
-    .newsletter-btn:hover { transform: scale(1.05); }
+
+    .newsletter-btn:hover {
+      transform: scale(1.05);
+    }
 
     .footer-bottom {
       padding-top: 2rem;
@@ -737,6 +1024,7 @@
       justify-content: space-between;
       gap: 1rem;
     }
+
     .footer-bottom-left {
       display: flex;
       flex-wrap: wrap;
@@ -745,34 +1033,56 @@
       font-size: 0.875rem;
       color: hsl(var(--muted-foreground));
     }
-    .footer-bottom-left a { color: hsl(var(--muted-foreground)); text-decoration: none; transition: color 0.2s; }
-    .footer-bottom-left a:hover { color: hsl(var(--foreground)); }
+
+    .footer-bottom-left a {
+      color: hsl(var(--muted-foreground));
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-left a:hover {
+      color: hsl(var(--foreground));
+    }
+
     .footer-bottom-right {
       display: flex;
       align-items: center;
       gap: 1rem;
       font-size: 0.875rem;
     }
+
     .status-indicator {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       color: hsl(var(--muted-foreground));
     }
+
     .status-dot {
       width: 0.5rem;
       height: 0.5rem;
       border-radius: 50%;
       background: hsl(142 71% 45%);
     }
+
     .made-with {
       display: flex;
       align-items: center;
       gap: 0.25rem;
       color: hsl(var(--muted-foreground));
     }
-    .made-with svg { color: hsl(var(--accent)); fill: hsl(var(--accent)); width: 1rem; height: 1rem; }
-    .made-with a { font-weight: 500; text-decoration: none; }
+
+    .made-with svg {
+      color: hsl(var(--accent));
+      fill: hsl(var(--accent));
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .made-with a {
+      font-weight: 500;
+      text-decoration: none;
+    }
 
     .footer-extra {
       margin-top: 2rem;
@@ -783,13 +1093,17 @@
       justify-content: center;
       gap: 1rem 2rem;
     }
+
     .footer-extra a {
       color: hsl(var(--muted-foreground));
       text-decoration: none;
       font-size: 0.875rem;
       transition: color 0.2s;
     }
-    .footer-extra a:hover { color: hsl(var(--foreground)); }
+
+    .footer-extra a:hover {
+      color: hsl(var(--foreground));
+    }
 
     /* Modal */
     .modal-overlay {
@@ -804,7 +1118,12 @@
       justify-content: center;
       padding: 1rem;
     }
-    .modal-overlay.open { display: flex; animation: fade-in 0.2s ease-out; }
+
+    .modal-overlay.open {
+      display: flex;
+      animation: fade-in 0.2s ease-out;
+    }
+
     .modal {
       background: hsl(var(--card));
       border: 1px solid hsl(var(--border));
@@ -815,6 +1134,7 @@
       position: relative;
       animation: scale-in 0.3s ease-out;
     }
+
     .modal-close {
       position: absolute;
       top: 1rem;
@@ -827,10 +1147,12 @@
       border-radius: 0.75rem;
       transition: all 0.2s;
     }
+
     .modal-close:hover {
       color: hsl(var(--foreground));
       background: hsl(var(--muted));
     }
+
     .auth-toggle {
       display: flex;
       padding: 0.25rem;
@@ -838,6 +1160,7 @@
       border-radius: 0.75rem;
       margin-bottom: 1.5rem;
     }
+
     .auth-toggle-btn {
       flex: 1;
       padding: 0.75rem;
@@ -850,19 +1173,28 @@
       background: transparent;
       color: hsl(var(--muted-foreground));
     }
+
     .auth-toggle-btn.active {
       background: var(--gradient-primary);
       color: hsl(var(--primary-foreground));
       box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
     }
-    .form-group { margin-bottom: 1rem; }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
     .form-label {
       display: block;
       font-size: 0.875rem;
       color: hsl(var(--muted-foreground));
       margin-bottom: 0.5rem;
     }
-    .input-wrapper { position: relative; }
+
+    .input-wrapper {
+      position: relative;
+    }
+
     .input-icon {
       position: absolute;
       left: 1rem;
@@ -872,6 +1204,7 @@
       width: 1.25rem;
       height: 1.25rem;
     }
+
     .form-input {
       width: 100%;
       padding: 0.875rem 1rem 0.875rem 3rem;
@@ -884,11 +1217,16 @@
       transition: all 0.2s;
       font-family: var(--font-sans);
     }
-    .form-input::placeholder { color: hsl(var(--muted-foreground) / 0.5); }
+
+    .form-input::placeholder {
+      color: hsl(var(--muted-foreground) / 0.5);
+    }
+
     .form-input:focus {
       border-color: hsl(var(--primary));
       box-shadow: 0 0 0 3px hsl(var(--primary) / 0.2);
     }
+
     .password-toggle {
       position: absolute;
       right: 1rem;
@@ -901,7 +1239,11 @@
       padding: 0;
       transition: color 0.2s;
     }
-    .password-toggle:hover { color: hsl(var(--foreground)); }
+
+    .password-toggle:hover {
+      color: hsl(var(--foreground));
+    }
+
     .forgot-password {
       display: block;
       text-align: right;
@@ -910,7 +1252,11 @@
       text-decoration: none;
       margin-bottom: 1rem;
     }
-    .forgot-password:hover { text-decoration: underline; }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+
     .divider {
       display: flex;
       align-items: center;
@@ -919,18 +1265,22 @@
       color: hsl(var(--muted-foreground));
       font-size: 0.875rem;
     }
-    .divider::before, .divider::after {
+
+    .divider::before,
+    .divider::after {
       content: '';
       flex: 1;
       height: 1px;
       background: hsl(var(--border));
     }
+
     .social-auth {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0.75rem;
       margin-bottom: 1.5rem;
     }
+
     .social-auth-btn {
       padding: 0.75rem;
       background: hsl(var(--muted));
@@ -942,15 +1292,18 @@
       align-items: center;
       justify-content: center;
     }
+
     .social-auth-btn:hover {
       background: hsl(var(--muted) / 0.8);
       border-color: hsl(var(--primary) / 0.3);
     }
+
     .auth-switch {
       text-align: center;
       font-size: 0.875rem;
       color: hsl(var(--muted-foreground));
     }
+
     .auth-switch button {
       background: none;
       border: none;
@@ -959,15 +1312,130 @@
       cursor: pointer;
       font-family: var(--font-sans);
     }
-    .auth-switch button:hover { text-decoration: underline; }
 
-    .icon { width: 1.25rem; height: 1.25rem; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-    .icon-sm { width: 1rem; height: 1rem; }
-    .icon-lg { width: 1.75rem; height: 1.75rem; }
-    .icon-xl { width: 2rem; height: 2rem; }
+    .auth-switch button:hover {
+      text-decoration: underline;
+    }
+
+    .icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .icon-sm {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .icon-lg {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    .icon-xl {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .switcherb {
+      background-color: var(--bg-color);
+      padding: 1rem 2rem;
+      border-radius: 1.25rem;
+      text-align: center;
+      align-items: center;
+    }
+
+    .loader {
+      color: rgb(124, 124, 124);
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-size: 25px;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+      height: 40px;
+      padding: 10px 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      border-radius: 8px;
+      justify-content: center;
+    }
+
+    .words {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .words::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(var(--bg-color) 10%,
+          transparent 30%,
+          transparent 70%,
+          var(--bg-color) 90%);
+      z-index: 20;
+    }
+
+    .word {
+      display: block;
+      height: 100%;
+      padding-left: 6px;
+      animation: spin_4991 4s infinite;
+      color: hsl(var(--muted-foreground));
+    }
+
+    @keyframes spin_4991 {
+      10% {
+        -webkit-transform: translateY(-102%);
+        transform: translateY(-102%);
+      }
+
+      25% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+      }
+
+      35% {
+        -webkit-transform: translateY(-202%);
+        transform: translateY(-202%);
+      }
+
+      50% {
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
+      }
+
+      60% {
+        -webkit-transform: translateY(-302%);
+        transform: translateY(-302%);
+      }
+
+      75% {
+        -webkit-transform: translateY(-300%);
+        transform: translateY(-300%);
+      }
+
+      85% {
+        -webkit-transform: translateY(-402%);
+        transform: translateY(-402%);
+      }
+
+      100% {
+        -webkit-transform: translateY(-400%);
+        transform: translateY(-400%);
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <div class="hero-bg">
     <div class="hero-gradient"></div>
     <div class="hero-blob hero-blob-1 animate-float"></div>
@@ -978,22 +1446,28 @@
     <div class="nav-content">
       <a href="#" class="logo animate-fade-in">
         <div class="logo-icon gradient-primary">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5"/></svg>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+            <path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5" />
+          </svg>
         </div>
         <span class="logo-text gradient-text">EduGrade</span>
       </a>
-      
+
       <div class="nav-links animate-fade-in animation-delay-100">
-        <a href="#features" class="nav-link">Features</a>
-        <a href="#pricing" class="nav-link">Pricing</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#features" class="nav-link">Jellemzők</a>
+        <a href="#about" class="nav-link">Rólunk</a>
+        <a href="#footer" class="nav-link">Kapcsolat</a>
       </div>
-      
+
       <div class="nav-actions animate-fade-in animation-delay-200">
         <div class="theme-switcher">
           <button class="btn-icon" id="themeToggle">
-            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+            </svg>
           </button>
           <div class="theme-dropdown" id="themeDropdown">
             <div class="theme-option" data-theme="">
@@ -1002,9 +1476,11 @@
                   <span class="theme-color" style="background: hsl(265 89% 58%);"></span>
                   <span class="theme-color" style="background: hsl(200 95% 50%); margin-left: -4px;"></span>
                 </div>
-                <span>Default</span>
+                <span>Alapértelmezett</span>
               </div>
-              <svg class="icon icon-sm theme-check" viewBox="0 0 24 24" style="display: none;"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg class="icon icon-sm theme-check" viewBox="0 0 24 24" style="display: none;">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
             </div>
             <div class="theme-option" data-theme="dark">
               <div class="theme-option-left">
@@ -1012,9 +1488,11 @@
                   <span class="theme-color" style="background: hsl(265 89% 66%);"></span>
                   <span class="theme-color" style="background: hsl(200 95% 58%); margin-left: -4px;"></span>
                 </div>
-                <span>Dark</span>
+                <span>Sötét</span>
               </div>
-              <svg class="icon icon-sm theme-check" viewBox="0 0 24 24" style="display: none;"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg class="icon icon-sm theme-check" viewBox="0 0 24 24" style="display: none;">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
             </div>
             <div class="theme-option" data-theme="ocean">
               <div class="theme-option-left">
@@ -1022,9 +1500,11 @@
                   <span class="theme-color" style="background: hsl(200 95% 45%);"></span>
                   <span class="theme-color" style="background: hsl(180 70% 45%); margin-left: -4px;"></span>
                 </div>
-                <span>Ocean</span>
+                <span>Óceán</span>
               </div>
-              <svg class="icon icon-sm theme-check" viewBox="0 0 24 24" style="display: none;"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg class="icon icon-sm theme-check" viewBox="0 0 24 24" style="display: none;">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
             </div>
             <div class="theme-option" data-theme="sunset">
               <div class="theme-option-left">
@@ -1032,9 +1512,11 @@
                   <span class="theme-color" style="background: hsl(340 80% 55%);"></span>
                   <span class="theme-color" style="background: hsl(30 90% 55%); margin-left: -4px;"></span>
                 </div>
-                <span>Sunset</span>
+                <span>Napnyugta</span>
               </div>
-              <svg class="icon icon-sm theme-check" viewBox="0 0 24 24" style="display: none;"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg class="icon icon-sm theme-check" viewBox="0 0 24 24" style="display: none;">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
             </div>
             <div class="theme-option" data-theme="forest">
               <div class="theme-option-left">
@@ -1042,14 +1524,16 @@
                   <span class="theme-color" style="background: hsl(140 60% 40%);"></span>
                   <span class="theme-color" style="background: hsl(100 50% 45%); margin-left: -4px;"></span>
                 </div>
-                <span>Forest</span>
+                <span>Erdő</span>
               </div>
-              <svg class="icon icon-sm theme-check" viewBox="0 0 24 24" style="display: none;"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg class="icon icon-sm theme-check" viewBox="0 0 24 24" style="display: none;">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
             </div>
           </div>
         </div>
-        <button class="btn btn-ghost" id="signInBtn">Sign In</button>
-        <button class="btn btn-primary" id="getStartedBtn">Get Started</button>
+        <button class="btn btn-ghost" id="signInBtn">Bejelentkezés</button>
+        <button class="btn btn-primary" id="getStartedBtn">Kezdés</button>
       </div>
     </div>
   </nav>
@@ -1057,63 +1541,86 @@
   <div class="modal-overlay" id="authModal">
     <div class="modal">
       <button class="modal-close" id="closeModal">
-        <svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
       </button>
-      
+
       <div class="auth-toggle">
-        <button class="auth-toggle-btn active" data-tab="signin">Sign In</button>
-        <button class="auth-toggle-btn" data-tab="signup">Sign Up</button>
+        <button class="auth-toggle-btn active" data-tab="signin">Bejelentkezés</button>
+        <button class="auth-toggle-btn" data-tab="signup">Regisztráció</button>
       </div>
 
       <form id="authForm">
         <div class="form-group" id="nameField" style="display: none;">
-          <label class="form-label">Full Name</label>
+          <label class="form-label">Egész név</label>
           <div class="input-wrapper">
-            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
             <input type="text" class="form-input" placeholder="John Doe">
           </div>
         </div>
         <div class="form-group">
-          <label class="form-label">Email Address</label>
+          <label class="form-label">Email Cím</label>
           <div class="input-wrapper">
-            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
             <input type="email" class="form-input" placeholder="you@example.com">
           </div>
         </div>
         <div class="form-group">
-          <label class="form-label">Password</label>
+          <label class="form-label">Jelszó</label>
           <div class="input-wrapper">
-            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <input type="password" class="form-input" id="passwordInput" placeholder="••••••••" style="padding-right: 3rem;">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            <input type="password" class="form-input" id="passwordInput" placeholder="••••••••"
+              style="padding-right: 3rem;">
             <button type="button" class="password-toggle" id="passwordToggle">
-              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
             </button>
           </div>
         </div>
-        <a href="#" class="forgot-password" id="forgotPassword">Forgot password?</a>
+        <a href="#" class="forgot-password" id="forgotPassword">Elfelejtett jelszó?</a>
         <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
-          <span id="authBtnText">Sign In</span>
-          <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <span id="authBtnText">Bejelentkezés</span>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </button>
       </form>
 
-      <div class="divider">or continue with</div>
+      <div class="divider">vagy folytassa ezzel</div>
 
       <div class="social-auth">
         <button class="social-auth-btn">
           <span style="font-weight: 700; font-size: 1.125rem;">G</span>
         </button>
         <button class="social-auth-btn">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+          </svg>
         </button>
         <button class="social-auth-btn">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+          </svg>
         </button>
       </div>
 
       <p class="auth-switch">
-        <span id="authSwitchText">Don't have an account?</span>
-        <button id="authSwitchBtn">Sign up</button>
+        <span id="authSwitchText">Nincs fiókod?</span>
+        <button id="authSwitchBtn">Regisztráció</button>
       </p>
     </div>
   </div>
@@ -1122,32 +1629,38 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge animate-fade-in">
-          <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor" stroke="none"/></svg>
-          <span>The Future of Education</span>
+          <svg class="icon icon-sm" viewBox="0 0 24 24">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor" stroke="none" />
+          </svg>
+          <span>Az Oktatás Jövője</span>
         </div>
-        
+
         <h1 class="hero-title animate-slide-up">
-          Track Your
-          <span class="gradient-text">Academic Success</span>
+          Kövesd a
+          <span class="gradient-text">Tanulási Eredményeidet</span>
         </h1>
-        
+
         <p class="hero-subtitle animate-slide-up animation-delay-100">
-          EduGrade empowers students and educators with powerful grade tracking, 
-          analytics, and insights to achieve academic excellence.
+          Az EduGrade hatékony osztályzatkövetéssel teszi lehetővé a diákokat és az oktatókat,
+          elemzések és betekintések az akadémiai kiválóság eléréséhez.
         </p>
-        
+
         <div class="hero-buttons animate-slide-up animation-delay-200">
           <button class="btn btn-primary btn-lg" id="heroGetStarted">
-            Start Free Trial
-            <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Kezdjünk bele!
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </button>
-          <button class="btn btn-secondary btn-lg">
-            <svg class="icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/></svg>
-            Watch Demo
+          <button class="btn btn-secondary btn-lg" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">
+            <svg class="icon" viewBox="0 0 24 24">
+              <polygon points="5 3 19 12 5 21 5 3" fill="currentColor" />
+            </svg>
+            Nézze meg a Demot
           </button>
         </div>
-        
-        
+
+
       </div>
     </div>
   </section>
@@ -1156,98 +1669,162 @@
     <div class="container">
       <div class="section-header">
         <div class="section-badge animate-fade-in">
-          <svg class="icon icon-sm text-secondary" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor"/></svg>
-          <span>Powerful Features</span>
+          <svg class="icon icon-sm text-secondary" viewBox="0 0 24 24">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor" />
+          </svg>
+          <span>Erőteljes funkciók</span>
         </div>
         <h2 class="section-title animate-slide-up">
-          Everything You Need to
-          <span class="gradient-text"> Excel</span>
+          Minden ami kell az
+          <span class="gradient-text"> Excel-hez</span>
         </h2>
         <p class="section-subtitle animate-slide-up animation-delay-100">
-          Comprehensive tools designed for students, teachers, and institutions
+          Átfogó eszközök diákok, tanárok és intézmények számára
         </p>
+        <div class="switcherb">
+          <div class="loader">
+            <p>Készült</p>
+            <div class="words">
+              <span class="word">Diákoknak</span>
+              <span class="word">Tanároknak</span>
+              <span class="word">Fejlesztőknek</span>
+              <span class="word">Játékosoknak</span>
+              <span class="word">Mindenkinek!</span>
+            </div>
+          </div>
+        </div>
       </div>
-      
+
       <div class="features-grid">
         <div class="card animate-slide-up" style="position: relative;">
           <div class="card-icon gradient-primary">
-            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
+            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M3 3v18h18" />
+              <path d="M18 17V9M13 17V5M8 17v-3" />
+            </svg>
           </div>
           <h3 class="card-title">Grade Analytics</h3>
           <p class="card-desc">Real-time insights into your academic performance with beautiful charts</p>
-          <svg class="icon card-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          <svg class="icon card-arrow" viewBox="0 0 24 24">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
         </div>
-        
+
         <div class="card animate-slide-up animation-delay-100" style="position: relative;">
           <div class="card-icon gradient-secondary">
-            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </svg>
           </div>
           <h3 class="card-title">Course Management</h3>
           <p class="card-desc">Organize all your courses, assignments, and deadlines in one place</p>
-          <svg class="icon card-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          <svg class="icon card-arrow" viewBox="0 0 24 24">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
         </div>
-        
+
         <div class="card animate-slide-up animation-delay-200" style="position: relative;">
           <div class="card-icon gradient-accent">
-            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
           </div>
           <h3 class="card-title">Collaboration</h3>
           <p class="card-desc">Connect with classmates and teachers for group projects and feedback</p>
-          <svg class="icon card-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          <svg class="icon card-arrow" viewBox="0 0 24 24">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
         </div>
-        
+
         <div class="card animate-slide-up animation-delay-100" style="position: relative;">
           <div class="card-icon gradient-primary">
-            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path
+                d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+            </svg>
           </div>
           <h3 class="card-title">Achievements</h3>
           <p class="card-desc">Earn badges and track milestones as you improve your grades</p>
-          <svg class="icon card-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          <svg class="icon card-arrow" viewBox="0 0 24 24">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
         </div>
-        
+
         <div class="card animate-slide-up animation-delay-200" style="position: relative;">
           <div class="card-icon gradient-secondary">
-            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
           </div>
           <h3 class="card-title">Secure & Private</h3>
           <p class="card-desc">Your academic data is encrypted and protected at all times</p>
-          <svg class="icon card-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          <svg class="icon card-arrow" viewBox="0 0 24 24">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
         </div>
-        
+
         <div class="card animate-slide-up animation-delay-300" style="position: relative;">
           <div class="card-icon gradient-accent">
-            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
           </div>
           <h3 class="card-title">Access Anywhere</h3>
           <p class="card-desc">Use EduGrade on any device, anytime, anywhere in the world</p>
-          <svg class="icon card-arrow" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          <svg class="icon card-arrow" viewBox="0 0 24 24">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Malyd 
   <section class="section">
     <div class="container">
       <div class="stats-card">
         <div class="stats-bg"></div>
         <div class="stats-grid">
           <div class="stat animate-slide-up">
-            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <div class="stat-value gradient-text">50K+</div>
-            <div class="stat-label">Active Students</div>
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            <div class="stat-value gradient-text">0</div>
+            <div class="stat-label">Aktív tanulók</div>
           </div>
           <div class="stat animate-slide-up animation-delay-100">
-            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
-            <div class="stat-value gradient-text">1M+</div>
-            <div class="stat-label">Grades Tracked</div>
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3v18h18" />
+              <path d="M18 17V9M13 17V5M8 17v-3" />
+            </svg>
+            <div class="stat-value gradient-text">0</div>
+            <div class="stat-label">Jegy trackelve</div>
           </div>
           <div class="stat animate-slide-up animation-delay-200">
-            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5"/></svg>
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5" />
+            </svg>
             <div class="stat-value gradient-text">500+</div>
-            <div class="stat-label">Schools</div>
+            <div class="stat-label">Redstone Launcher letoltes</div>
           </div>
           <div class="stat animate-slide-up animation-delay-300">
-            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
             <div class="stat-value gradient-text">99.9%</div>
             <div class="stat-label">Uptime</div>
           </div>
@@ -1255,41 +1832,51 @@
       </div>
     </div>
   </section>
-
+ -->
   <section class="section">
     <div class="container">
       <div class="section-header">
         <div class="section-badge">
-          <svg class="icon icon-sm text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-          <span>Available Everywhere</span>
+          <svg class="icon icon-sm text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+          </svg>
+          <span>Mindenhol elérhető</span>
         </div>
         <h2 class="section-title">
-          Get <span class="gradient-text">EduGrade</span> on Any Device
-        </h2>
+          Szerzd meg az <span class="gradient-text">EduGrade</span>-et mindenhol</h2>
         <p class="section-subtitle">
-          Download our app on iOS, Android, or use the web version
+          Töltsd le az appot majd...
         </p>
       </div>
-      
+
       <div class="download-grid">
-        <button class="download-btn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <button class="download-btn" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+          </svg>
           <div>
             <div class="download-btn-text">Download on the</div>
             <div class="download-btn-label">App Store</div>
           </div>
         </button>
-        <button class="download-btn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 10.5c.53.4.53 1.2 0 1.6l-14 10.5c-.66.5-1.6.03-1.6-.8z"/></svg>
+        <button class="download-btn" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 10.5c.53.4.53 1.2 0 1.6l-14 10.5c-.66.5-1.6.03-1.6-.8z" />
+          </svg>
           <div>
             <div class="download-btn-text">Get it on</div>
             <div class="download-btn-label">Google Play</div>
           </div>
         </button>
-        <button class="download-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <button class="download-btn" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+            <line x1="8" y1="21" x2="16" y2="21" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+          </svg>
           <div>
-            <div class="download-btn-text">Open in browser</div>
+            <div class="download-btn-text" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">Open in browser</div>
             <div class="download-btn-label">Web App</div>
           </div>
         </button>
@@ -1297,116 +1884,143 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-brand-logo">
             <div class="footer-brand-icon gradient-primary">
-              <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5"/></svg>
+              <svg class="icon-lg" style="color: hsl(var(--primary-foreground));" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5" />
+              </svg>
             </div>
             <span class="footer-brand-name gradient-text">EduGrade</span>
           </div>
           <p class="footer-brand-desc">
-            Empowering students worldwide to achieve their academic goals with intelligent grade tracking.
+            Jegykövetés egyszerűen, bárhol is legyél.
           </p>
-          <div class="social-links">
-            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
-            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg></a>
-            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
-            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <div class="social-links" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">
+            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+              </svg></a>
+            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+              </svg></a>
+            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg></a>
+            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg></a>
+            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg></a>
+            <a href="#" class="social-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg></a>
           </div>
         </div>
-        
+
         <div class="footer-section">
           <h4>Products</h4>
-          <div class="footer-links">
-            <a href="#" class="footer-link">Grade Tracker <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
-            <a href="#" class="footer-link">Analytics Dashboard <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
-            <a href="#" class="footer-link">Course Manager <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
-            <a href="#" class="footer-link">Study Planner <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
-            <a href="#" class="footer-link">Report Generator <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
-            <a href="#" class="footer-link">Mobile App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+          <div class="footer-links" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">
+            <a href="#" class="footer-link">Grade Tracker <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+              </svg></a>
+            <a href="#" class="footer-link">Analytics Dashboard <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+              </svg></a>
+            <a href="#" class="footer-link">Course Manager <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+              </svg></a>
+            <a href="#" class="footer-link">Mobile App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+              </svg></a>
           </div>
         </div>
-        
+
         <div class="footer-section">
           <h4>Resources</h4>
-          <div class="footer-links">
+          <div class="footer-links" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">
             <a href="#" class="footer-link">Documentation</a>
-            <a href="#" class="footer-link">API Reference</a>
             <a href="#" class="footer-link">Tutorials</a>
             <a href="#" class="footer-link">Blog</a>
             <a href="#" class="footer-link">Community</a>
             <a href="#" class="footer-link">Changelog</a>
           </div>
         </div>
-        
+
         <div class="footer-section">
           <h4>Company</h4>
-          <div class="footer-links">
-            <a href="#" class="footer-link">About Us</a>
-            <a href="#" class="footer-link">Careers</a>
-            <a href="#" class="footer-link">Press Kit</a>
+          <div class="footer-links" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">
             <a href="#" class="footer-link">Partners</a>
-            <a href="#" class="footer-link">Investors</a>
             <a href="#" class="footer-link">Contact</a>
           </div>
         </div>
-        
+
         <div class="footer-section">
           <h4>Legal</h4>
-          <div class="footer-links">
-            <a href="#" class="footer-link">Privacy Policy</a>
-            <a href="#" class="footer-link">Terms of Service</a>
-            <a href="#" class="footer-link">Cookie Policy</a>
-            <a href="#" class="footer-link">GDPR</a>
+          <div class="footer-links" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">
             <a href="#" class="footer-link">Accessibility</a>
             <a href="#" class="footer-link">Security</a>
           </div>
         </div>
       </div>
-      
+
       <div class="newsletter">
         <h3 class="newsletter-title">Stay Updated</h3>
         <p class="newsletter-desc">Subscribe to our newsletter for the latest features and updates</p>
         <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
           <input type="email" class="newsletter-input" placeholder="Enter your email" required>
-          <button type="submit" class="newsletter-btn">Subscribe</button>
+          <button type="submit" class="newsletter-btn" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">Subscribe</button>
         </form>
       </div>
-      
+
       <div class="footer-bottom">
         <div class="footer-bottom-left">
-          <span>© 2024 EduGrade. All rights reserved.</span>
-          <a href="#">Status</a>
-          <a href="#">Sitemap</a>
+          <span>© 2026 EduGrade. Minden jog fenntartva.</span>
+          <a href="#" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">Status</a>
+          <a href="#" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">Sitemap</a>
         </div>
         <div class="footer-bottom-right">
           <div class="status-indicator">
             <span class="status-dot animate-pulse"></span>
-            All systems operational
+           Minden rendszer működőképes
           </div>
           <div class="made-with">
             Made with
-            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
             by <a href="#" class="gradient-text">EduGrade Team</a>
           </div>
         </div>
       </div>
-      
-      <div class="footer-extra">
+
+      <div class="footer-extra" style="cursor: not-allowed; pointer-events: none; opacity: 0.6;">
         <a href="#">Help Center</a>
-        <a href="#">Developer Portal</a>
-        <a href="#">Status Page</a>
         <a href="#">Roadmap</a>
         <a href="#">Feedback</a>
-        <a href="#">Become an Affiliate</a>
-        <a href="#">Enterprise</a>
-        <a href="#">Education Discount</a>
-        <a href="#">GitHub Sponsors</a>
       </div>
     </div>
   </footer>
@@ -1533,4 +2147,5 @@
     });
   </script>
 </body>
+
 </html>
